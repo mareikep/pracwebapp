@@ -16,5 +16,7 @@
 
 
 {% block content %}
-<div style="left: 0; right: 0; position: absolute; width: 300px; height: 100px; z-index: 1000;"><a href="{{ url_for('prac')}}"><img src="{{ url_for('download_static', filename='images/prac_logo.png') }}"></a></div>
+    <div style="left: 0; right: 0; position: absolute; width: 300px; height: 100px; z-index: 1000;"><a href="{{ url_for('prac')}}"><img src="{{ url_for('download_static', filename='images/prac_logo.png') }}"></a></div>
+    <div id="prac_container"></div>
 {% endblock  %}
+

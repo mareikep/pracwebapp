@@ -1,17 +1,19 @@
 {% extends 'prac_layout.html' %}
+
+{% block title %}Inference{% endblock %}
+
 {% block head %}
     {{ super() }}
-<script type="text/javascript" src="{{ url_for('download_static', filename='script/pracweb.js') }}"></script>
-{% block title %}Inference{% endblock %}
+    <script type="text/javascript" src="{{ url_for('download_static', filename='script/pracweb.js') }}"></script>
 {% endblock %}
 
 {% block menu %}
-{{ super() }}
+    {{ super() }}
 {% endblock %}
 
+{% block _menu_right %}{% endblock %}
 {% block menu_right %}
     {{ super() }}
-    {% block _menu_right %}{% endblock %}
 {% endblock %}
 
 {% block content %}
