@@ -4,3 +4,5 @@ Werkzeug
 wsgiref
 Flask-WTF
 graphviz
+python-geoip-geolite2
+python-geoip
