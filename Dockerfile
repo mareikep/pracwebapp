@@ -9,7 +9,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre
 ENV PATH $JAVA_HOME/bin:$PATH
 
 ENV DOCKER_LINKS postgres_db:postgres dockerbridge:dockerbridge
-ENV DOCKER_VOLUMES user_data prac_tools
+ENV DOCKER_VOLUMES prac_tools prac_data
 
 COPY requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
