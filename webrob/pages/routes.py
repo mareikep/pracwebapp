@@ -23,6 +23,7 @@ def register_routes():
     home = expanduser("~")
     pracApp.app.config['ALLOWED_EXTENSIONS'] = set(['mln','db','pracmln'])
     pracApp.app.config['UPLOAD_FOLDER'] = os.path.join(home, 'pracfiles')
+
     pracApp.app.config['LOG_FOLDER'] = os.path.join(pracApp.app.config['UPLOAD_FOLDER'], 'logs')
     if not os.path.exists(pracApp.app.config['UPLOAD_FOLDER']):
        os.mkdir(pracApp.app.config['UPLOAD_FOLDER'])
