@@ -4,8 +4,9 @@
 
 {% block head %}
     {{ super() }}
-    <script type="text/javascript" src="{{ url_for('download_static', filename='script/pracweb.js') }}"></script>
     <meta name="viewport" content="user-scalable=yes">
+    <script type="text/javascript" src="{{ url_for('download_prac_static', filename='script/pracweb.js') }}"></script>
+    <script src="{{ url_for('download_prac_static', filename='script/d3.min.js') }}"></script>
 {% endblock %}
 
 {% block menu %}
