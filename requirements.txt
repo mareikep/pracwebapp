@@ -14,6 +14,7 @@ lxml
 graphviz
 psutil
 Jinja2
+matplotlib
 werkzeug
 python-geoip-geolite2
 python-geoip
