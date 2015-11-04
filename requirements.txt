@@ -11,7 +11,7 @@ Pillow
 beautifulsoup4
 lxml
 graphviz
-psutil
+psutil==0.4.1
 Jinja2
 matplotlib
 werkzeug

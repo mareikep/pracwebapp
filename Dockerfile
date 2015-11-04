@@ -4,7 +4,7 @@ USER root
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q bash build-essential \
               gfortran libatlas-base-dev libffi-dev libssl-dev curl git \
-              python2.7 python2.7-dev python-pip python-setuptools python-tk python-support python-imaging python-scipy\
+              python2.7 python2.7-dev python-pip python-setuptools python-tk python-support python-imaging python-scipy \
               wget libpq-dev texlive-latex-recommended \
               openjdk-7-jre default-jre-headless \
               dvipng libjpeg-dev libpng-dev pkg-config libfreetype6-dev \
@@ -23,12 +23,4 @@ RUN sudo pip install -U pip && sudo pip install -U -r /tmp/requirements.txt
 WORKDIR /opt/webapp
 ADD . /opt/webapp/
 
-#ENTRYPOINT /bin/bash /opt/webapp/init.bash
-RUN cd /opt/practools/tools/pracmln && python make_apps.py && chmod +x env.sh && . ./env.sh
-RUN cd /opt/practools/tools/prac && python make_apps.py && chmod +x env.sh && . ./env.sh
-
-RUN echo 'application/mln                 mln' >> $HOME/.mime.types
-RUN echo 'application/db                  db' >> $HOME/.mime.types
-RUN echo 'application/pracmln             pracmln' >> $HOME/.mime.types
-
-CMD ['python', '/opt/webapp/runserver.py']
+ENTRYPOINT /bin/bash /opt/webapp/init.bash
