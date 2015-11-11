@@ -23,7 +23,7 @@ def init_webapp(app, db):
     pracApp.app.config['ALLOWED_EXTENSIONS'] = {'mln', 'db', 'pracmln', 'emln'}
     pracApp.app.config['UPLOAD_FOLDER'] = '/home/ros/pracfiles'
     pracApp.app.config['PRAC_ROOT_PATH'] = '/opt/practools/tools/prac'
-    pracApp.app.config['LOG_FOLDER'] = os.path.join('/opt/practools/tools/prac/pracweb/gui/', 'log')
+    pracApp.app.config['LOG_FOLDER'] = os.path.join('/home/ros/pracfiles/prac', 'log')
 
     if not os.path.exists(pracApp.app.config['LOG_FOLDER']):
         os.mkdir(pracApp.app.config['LOG_FOLDER'])
